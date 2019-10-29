@@ -1,24 +1,15 @@
 try(mhartington Ionic Team) 
 
 ``` 
-https://forum.ionicframework.com/t/issue-adding-ionic-native-plugin-to-ionic-v3-project/154064/10
+https://ionicframework.com/docs/native/fingerprint-aio
 ```
 
-when(In app.module)
+when(In app.component.ts)
 
 ```angular2
-import { FingerprintAIO } from '@ionic-native/fingerprint-aio'
-
-@NgModule({
-  providers: [
-...
-    FingerprintAIO,
-...
-
-  ]
-})
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 ```
 error: 
 ```
-index.js:92 Uncaught TypeError: Object(...) is not a function
+TS2307: Cannot find module '@ionic-native/fingerprint-aio/ngx'.
 ```
