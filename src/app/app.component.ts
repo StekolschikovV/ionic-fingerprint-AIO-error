@@ -1,27 +1,27 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import { Platform } from '@ionic/angular';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
+import {StatusBar} from '@ionic-native/status-bar/ngx';
+
+
+import {NavController, Platform} from '@ionic/angular';
+import {FingerprintAIO} from '@ionic-native/fingerprint-aio';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
-    this.initializeApp();
-  }
+    constructor(
+        // private fingerPrint: FingerprintAIO,
+        // private platform: Platform,
+        // public navCtrl: NavController
+    ) {
+        // this.platform.ready()
+        //     .then(() => this.fingerPrint.isAvailable())
+        //     .then(val => console.log('val', val));
+    }
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
-  }
 }
